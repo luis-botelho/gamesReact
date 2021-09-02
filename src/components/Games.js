@@ -61,16 +61,19 @@ export default function Games(){
     return(
         <div>
             <div className="header">
-                <h2>{categorie.nome}</h2>
-                <p>{categorie.descricao}</p>
+                <h2 className="headerTitle">{categorie.nome}</h2>
+                <p className="headerP">{categorie.descricao}</p>
             </div>
             <nav className="nav">
-                <button onClick={choiceArcade}>Arcade</button>
-                <button onClick={choiceMoba}>MOBA</button>
-                <button onClick={choiceFps}>FPS</button>
-                <button onClick={choiceRogue}>Roguelikes</button>
-                <button onClick={choiceOpen}>Opemworlds</button>
-                <button onClick={choiceMMO}>MMORPG</button>
+                <h3>Escolha uma Categoria: </h3>
+                <div>
+                    <button onClick={choiceArcade}>Arcade</button>
+                    <button onClick={choiceMoba}>MOBA</button>
+                    <button onClick={choiceFps}>FPS</button>
+                    <button onClick={choiceRogue}>Roguelikes</button>
+                    <button onClick={choiceOpen}>Opemworlds</button>
+                    <button onClick={choiceMMO}>MMORPG</button>
+                </div>
             </nav>
 
             <div className="gameCard">
@@ -78,14 +81,16 @@ export default function Games(){
                 <div className="game">
                     <h3>{i.nome}</h3>
                     <div className="imgCard"><img src={i.img} alt={i.nome}/></div>
-                    <span>Produtora:{i.produtora}</span>
-                    <span>Ano:{i.ano}</span>
+                    <div className="spanDiv">
+                        <p><span>Produtora: </span>{i.produtora}</p>
+                        <p><span>Ano: </span>{i.ano}</p>
+                    </div>
                     <div className="desc">
-                        <p>Descrição:{i.descricao}</p>
+                        <p><span>Descrição: </span>{i.descricao}</p>
                     </div>
                     <div className="gameBtn">
-                        <a href={`http://google.com/search?q=${i.nome}`} target="_blank"><button>Compre</button></a>
-                        <a href="http://google.com" target="_blank"><button>Video</button></a>
+                        <a href={`http://google.com/search?q=${i.nome}`} target="_blank"><button>Saiba Mais</button></a>
+                        <a href={`https://www.youtube.com/results?search_query=${i.nome}`} target="_blank"><button>Videos</button></a>
                     </div>
                 </div>
                 ))}
@@ -93,4 +98,5 @@ export default function Games(){
         </div>
     );
 }   
+
 
