@@ -19,6 +19,13 @@
     padding: .5rem;
     background-color:#ccc;
     border: 1px solid green;
+    width: 100%;  
+}
+.btnDiv{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 .nav button{
     padding:.3rem;
@@ -27,8 +34,9 @@
     border: 1px solid green;
     color:green;
     margin: .5rem;
-
+    width:9rem;
 }
+
 .nav button:hover{
     transform:scale(1.1)
 }

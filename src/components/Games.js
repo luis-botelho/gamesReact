@@ -20,7 +20,7 @@ var smite = new Game('Smite','http://s2.glbimg.com/xvDjXOHsq8A_vpanPpOsufAKmCo=/
 // fps
 var csGo = new Game('Counter-Strike: Global Offensive','https://mundoconectado.com.br/uploads/chamadas/cs_go_chamada.jpg','Valve', 'jogo online desenvolvido pela Valve Corporation e pela Hidden Path Entertainment, sendo uma sequência de Counter-Strike: Source. ... O jogo conta com conteúdo clássico de tiro, como versões retrabalhadas de mapas clássicos, bem como novos mapas, personagens e modos de jogo.',2012)
 var valorant = new Game('Valorant','https://s2.glbimg.com/l_RDFdNuy7tQolHRDRPp_quGvaI=/0x0:1200x675/640x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2020/j/U/iLO5YCRBmGHUsDwBIBHA/valorant-closed-beta-1200x675.png', 'Riot Games', 'jogo FPS da Riot Games, a mesma desenvolvedora do League of Legends (LoL). Conhecido inicialmente como “Project A”, o game é um fps 5v5 tático que mistura elementos de Counter Strike: Global Offensive (CS:GO) com Overwatch. ... Vence a equipe que fizer 13 pontos primeiro, e os jogos têm até 24 rounds.', 2020)
-var Overwatch = new Game('Overwatch','https://www.oficinadanet.com.br/imagens/post/31298/750xNxoverwatch-modo-experimental-testa-buffs-de-herois-e-nerfs.jpg.pagespeed.ic.c5840de50f.jpg', 'Blizzard Entertainment.', 'jogo eletrônico multijogador de tiro em primeira pessoa desenvolvido e publicado pela Blizzard Entertainment. Foi lançado em 24 de maio de 2016 para Microsoft Windows, PlayStation 4 e Xbox One e em 15 de outubro de 2019 para Nintendo Switch.', 2016)
+var Overwatch = new Game('Overwatch','https://www.oficinadanet.com.br/imagens/post/31298/750xNxoverwatch-modo-experimental-testa-buffs-de-herois-e-nerfs.jpg.pagespeed.ic.c5840de50f.jpg', 'Blizzard', 'jogo eletrônico multijogador de tiro em primeira pessoa desenvolvido e publicado pela Blizzard Entertainment. Foi lançado em 24 de maio de 2016 para Microsoft Windows, PlayStation 4 e Xbox One e em 15 de outubro de 2019 para Nintendo Switch.', 2016)
 // rouguelike
 var deadCells = new Game('Dead Cells','https://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_download_software_1/H2x1_NSwitchDS_DeadCells_image1600w.jpg','Motion Twin', 'um jogo eletrônico roguelike-metroidvania desenvolvido e publicado pela Motion Twin. ... Dead Cells usa um sistema permadeath, fazendo com que o jogador perca todas as células e outras moedas ou itens em cada instância da morte. A Motion Twin foi inspirada por The Binding of Isaac no desenvolvimento do jogo.', 2017)
 var hades = new Game('Hades','https://cdn.cloudflare.steamstatic.com/steam/apps/1145360/capsule_616x353.jpg', 'Supergiant Games', 'Dos mesmos criadores de Bastion, Transistor e Pyre, Hades é um game que pertence ao gênero roguelike, que envolve mapas com morte permanente. ... No jogo, os players se veem na pele de Zagreu, o Príncipe do Submundo e filho do deus Hades. O objetivo é guiar o protagonista em uma fuga do inferno', 2020)
@@ -66,7 +66,7 @@ export default function Games(){
             </div>
             <nav className="nav">
                 <h3>Escolha uma Categoria: </h3>
-                <div>
+                <div className="btnDiv">
                     <button onClick={choiceArcade}>Arcade</button>
                     <button onClick={choiceMoba}>MOBA</button>
                     <button onClick={choiceFps}>FPS</button>
@@ -83,12 +83,12 @@ export default function Games(){
                     <div className="imgCard"><img src={i.img} alt={i.nome}/></div>
                     <div className="spanDiv">
                         <p><span>Produtora: </span>{i.produtora}</p>
-                        <p><span>Ano: </span>{i.ano}</p>
+                        <p><span>Ano: </span>{i.ano}</p> 
                     </div>
                     <div className="desc">
                         <p><span>Descrição: </span>{i.descricao}</p>
                     </div>
-                    <div className="gameBtn">
+                    <div className="gameBtn"> 
                         <a href={`http://google.com/search?q=${i.nome}`} target="_blank"><button>Saiba Mais</button></a>
                         <a href={`https://www.youtube.com/results?search_query=${i.nome}`} target="_blank"><button>Videos</button></a>
                     </div>
